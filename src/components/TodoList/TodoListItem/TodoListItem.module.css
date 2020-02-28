@@ -1,0 +1,14 @@
+.TodoListItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .25rem .75rem;
+    color: #000;
+    user-select: none;
+}
+
+.TodoListItem.important {
+    font-weight: 700;
+    color: #ff6347;
+}
+

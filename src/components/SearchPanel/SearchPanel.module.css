@@ -1,0 +1,11 @@
+.SearchPanel {
+    display: flex;
+    flex-grow: 1;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+}
+
+.SearchPanelInput {
+    flex-grow: 1;
+    padding: 0.25rem 0.75rem;
+}
