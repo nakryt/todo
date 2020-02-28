@@ -1,4 +1,6 @@
 .App {
     display: flex;
     flex-grow: 1;
+    min-height: 100vh;
+    background: linear-gradient(0deg, #e0ffff, #60FFCA 50%, #e0ffff 100%);
 }

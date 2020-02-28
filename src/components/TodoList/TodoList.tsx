@@ -1,17 +1,15 @@
 import React from "react"
 import classes from "./TodoList.module.css"
-import {TTodos} from "../../types/todoTypes";
 import TodoListItem from "./TodoListItem/TodoListItem";
 import {useSelector} from "react-redux";
-import {getTodos} from "../../store/todoSelectors";
+import {getTodoList} from "../../store/todoSelectors";
 
 const TodoList: React.FC = () => {
-    const todos = useSelector(getTodos)
-    debugger
+    const todo = useSelector(getTodoList)
     return (
-        <ul className={`${classes.TodoList} list-group`}>
+        <ul className={`${classes.TodoList} list-group mb-3`}>
             {
-                todos.map((item) =>
+                todo.map((item) =>
                     <TodoListItem key={item.id} {...item} />
                 )
             }

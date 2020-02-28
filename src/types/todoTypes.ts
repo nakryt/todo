@@ -3,6 +3,7 @@ export type TTodo = {
     label: string
     important: boolean
     active: boolean
+    isEdit: boolean
 }
 
 export type TTodos = Array<TTodo>

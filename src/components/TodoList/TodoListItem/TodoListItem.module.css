@@ -7,8 +7,13 @@
     user-select: none;
 }
 
+.TodoListItem p {
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
 .TodoListItem.important {
     font-weight: 700;
-    color: #ff6347;
+    color: #cf0c23;
 }
 

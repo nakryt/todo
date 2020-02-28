@@ -1,0 +1,43 @@
+.TextWithEditWrap {
+    position: relative;
+    flex-grow: 1;
+}
+
+.TextWithEdit {
+    width: 100%;
+    padding: 0.1rem 4rem 0.1rem 0.5rem;
+}
+
+.EditIcons {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+.EditIconsButton {
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+.EditIconsCheck {
+    position: absolute;
+    top: 0;
+    left: 4px;
+    margin-right: 5px;
+    color: #90ee90;
+    /*cursor: pointer;*/
+}
+
+.EditIconsCancel {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    color: #cd5c5c;
+    /*cursor: pointer;*/
+}
+
+.TextWithEditValue {
+    margin-left: 10px;
+}

@@ -1,3 +1,7 @@
-.ItemStatusFilter {
+.ItemStatusFilter button {
+    margin-right: 2px;
+}
 
+.ItemStatusFilter button:last-child {
+    margin-right: 0;
 }
