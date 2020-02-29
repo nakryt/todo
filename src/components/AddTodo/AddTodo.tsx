@@ -1,20 +1,27 @@
 import React from "react"
 import classes from "./AddTodo.module.css"
-import {Form, Field, reduxForm, InjectedFormProps} from "redux-form"
-import {TPropsAddTodo} from "./AddTodoContainer";
-import validate from "../../utils/validate"
+import { useForm } from "react-hook-form";
+import {useDispatch} from "react-redux";
+import {addItem} from "../../store/todoActions";
 
-const AddTodo: React.FC<InjectedFormProps<TPropsAddTodo>> = (props) => {
-    return (
-            <Form onSubmit={props.handleSubmit} className={classes.AddTodo}>
-                <Field name='addTodoItem'
-                       component={'input'}
-                       placeholder='What do you want to do..?'
-                       validate={[validate.require]}
-                />
-                <button type='submit' className='btn btn-success'>Add</button>
-            </Form>
-    )
+type TFormData = {
+    todo: string;
 };
 
-export default reduxForm<TPropsAddTodo>({form: 'addTodo'})(AddTodo)
+const AddTodo:React.FC = () => {
+    const { register, handleSubmit, reset } = useForm<TFormData>();
+    const dispatch = useDispatch()
+    const onSubmit = handleSubmit(({ todo }:TFormData) => {
+        dispatch(addItem(todo))
+        reset()
+    });
+
+    return (
+        <form className={classes.AddTodo} onSubmit={onSubmit}>
+            <input name="todo" ref={register({ required: true })} />
+            <button className='btn btn-success'>Add</button>
+        </form>
+    );
+}
+
+export default AddTodo
